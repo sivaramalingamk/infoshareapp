@@ -8,3 +8,7 @@
 /captures
 .externalNativeBuild
 /gradle.properties
+.idea/
+app/libs/
+gradle/wrapper/gradle-wrapper.jar
+gradlew.bat
