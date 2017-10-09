@@ -19,9 +19,22 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
-<RadioGroup
+<TextView
+
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="Select Status"
+    android:textSize="30dp"
+
+    />
+
+        <RadioGroup
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+            android:background="#87265492"
+            >
 
     <RadioButton
         android:id="@+id/radioButton3"
@@ -29,6 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:onClick="rbclick"
+        android:checked="false"
         android:text="Caregiver" />
 
     <RadioButton
@@ -36,7 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:onClick="rbclick"
         android:layout_weight="1"
+        android:checked="false"
         android:text="CPUT Lecturer" />
 
     <RadioButton
@@ -45,7 +62,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:onClick="rbclick"
+        android:checked="false"
         android:text="RadioButton" />
+
 </RadioGroup>
 
     </android.support.design.widget.AppBarLayout>
