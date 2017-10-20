@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
+
 
 public class Reader extends AppCompatActivity {
 
@@ -22,7 +24,7 @@ ListView listView;
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i,
+             public void onItemClick(AdapterView<?> adapterView, View view, int i,
                                     int position, long l) {
 
                 if (position==0){
