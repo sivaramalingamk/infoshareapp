@@ -17,15 +17,14 @@ ListView listView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reader);
-        String items [] =  new String [] {"story 1", "story 2", "story 3" };
-        listView  = (ListView) findViewById(R.id.Listview);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, items);
+        String items[] = new String[]{"story 1", "story 2", "story 3"};
+        listView = (ListView) findViewById(R.id.Listview);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, items);
         listView.setAdapter(adapter);
+    }
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-             public void onItemClick(AdapterView<?> adapterView, View view, int i,
-                                    int position, long l) {
+
+            protected void onItemClick(ListView l, View view, int position, long id, AdapterView<?> parent) {
 
                 if (position==0){
                     Intent myintent = new Intent(view.getContext(), ReadStory.class);
@@ -47,11 +46,16 @@ ListView listView;
                     Intent myintent = new Intent(view.getContext(), ReadStory.class);
                     startActivityForResult(myintent, 3);
                 }
+
+
             }
 
-        });
 
 
-    }
-}
+
+        }
+
+
+
+
 
